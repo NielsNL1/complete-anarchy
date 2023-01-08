@@ -4,6 +4,7 @@ import webbrowser
 import pyautogui
 
 list1 = list(range(1, 101))
+
 list2 = ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
          ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7',
          '8', '9', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`',
@@ -26,13 +27,17 @@ list2 = ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
          'shift', 'shiftleft', 'shiftright', 'sleep', 'space', 'stop', 'subtract', 'tab',
          'up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen',
          'command', 'option', 'optionleft', 'optionright']
-list1_random = (random.choice(list1))
-list2_random = (random.choice(list2))
 
+list3 = ['https://www.youtube.com/', 'https://stackoverflow.com/', 'https://twitter.com/' ]
 
 while True:
+    
+    list1_random = (random.choice(list1))
+    list2_random = (random.choice(list2))
+    list3_random = (random.choice(list3))
     mouse.move(list1_random, list1_random, absolute=False)
-    mouse.click('left')
-    mouse.click('right')
-    webbrowser.open('https://www.youtube.com/')
     pyautogui.hotkey('list2_random')
+    webbrowser.open(list3_random)
+    mouse.click('left')
+    mouse.click('middle')
+    mouse.click('right')
